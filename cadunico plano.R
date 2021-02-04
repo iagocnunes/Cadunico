@@ -61,6 +61,9 @@ rm(list = ls())
 cadunic_pess_2018 <- readRDS(file="cadunic_pess_2018") 
 cadunic_pess_2018 <- as_survey_design(cadunic_pess_2018)
 options(scipen=999)
-svytotal(~ one, cadunic_pess_2018)
 
-svytotal(~cod_sabe_ler_escrever_memb, cadunic_pess_2018)
+cadunic_ES <- subset(cadunic_pess_2018, cd_ibge=="3200102"|cd_ibge=="3200136"|cd_ibge=="3200169"|cd_ibge=="3200201"|cd_ibge=="3200300"|cd_ibge=="3200359"|cd_ibge=="3200409"|cd_ibge=="3200508"|cd_ibge=="3200607"|cd_ibge=="3200706"|cd_ibge=="3200805"|cd_ibge=="3200904"|cd_ibge=="3201001"|cd_ibge=="3201100"|cd_ibge=="3201159"|cd_ibge=="3201209"|cd_ibge=="3201308"|cd_ibge=="3201407"|cd_ibge=="3201506"|cd_ibge=="3201605"|cd_ibge=="3201704"|cd_ibge=="3201803"|cd_ibge=="3201902"|cd_ibge=="3202009"|cd_ibge=="3202108"|cd_ibge=="3202207"|cd_ibge=="3202256"|cd_ibge=="3202306"|cd_ibge=="3202405"|cd_ibge=="3202454"|cd_ibge=="3202504"|cd_ibge=="3202553"|cd_ibge=="3202603"|cd_ibge=="3202652"|cd_ibge=="3202702"|cd_ibge=="3202801"|cd_ibge=="3202900"|cd_ibge=="3203007"|cd_ibge=="3203056"|cd_ibge=="3203106"|cd_ibge=="3203130"|cd_ibge=="3203163"|cd_ibge=="3203205"|cd_ibge=="3203304"|cd_ibge=="3203320"|cd_ibge=="3203346"|cd_ibge=="3203353"|cd_ibge=="3203403"|cd_ibge=="3203502"|cd_ibge=="3203601"|cd_ibge=="3203700"|cd_ibge=="3203809"|cd_ibge=="3203908"|cd_ibge=="3204005"|cd_ibge=="3204054"|cd_ibge=="3204104"|cd_ibge=="3204203"|cd_ibge=="3204252"|cd_ibge=="3204302"|cd_ibge=="3204351"|cd_ibge=="3204401"|cd_ibge=="3204500"|cd_ibge=="3204559"|cd_ibge=="3204609"|cd_ibge=="3204658"|cd_ibge=="3204708"|cd_ibge=="3204807"|cd_ibge=="3204906"|cd_ibge=="3204955"|cd_ibge=="3205002"|cd_ibge=="3205010"|cd_ibge=="3205036"|cd_ibge=="3205069"|cd_ibge=="3205101"|cd_ibge=="3205150"|cd_ibge=="3205176"|cd_ibge=="3205200"|cd_ibge=="3205309")
+rm(cadunic_pess_2018)
+svytotal(~ one, cadunic_ES)
+
+svytotal(~cod_sabe_ler_escrever_memb, cadunic_ES)
