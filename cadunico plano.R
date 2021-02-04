@@ -66,4 +66,4 @@ cadunic_ES <- subset(cadunic_pess_2018, cd_ibge=="3200102"|cd_ibge=="3200136"|cd
 rm(cadunic_pess_2018)
 svytotal(~ one, cadunic_ES)
 
-svytotal(~cod_sabe_ler_escrever_memb, cadunic_ES)
+svytotal(~cod_sabe_ler_escrever_memb, cadunic_ES, na.rm=T)
